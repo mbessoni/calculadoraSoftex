@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora</title>
+</head>
+<body>
+
+<script>
+  // Solicita os valores e operador ao usuário
+  const valor1 = parseFloat(prompt("Informe o primeiro valor:"));
+  const valor2 = parseFloat(prompt("Informe o segundo valor:"));
+  const operador = prompt("Informe o operador (+, -, *, /):");
+
+  let resultado;
+
+  switch (operador) {
+    case "+":
+      resultado = valor1 + valor2;
+      break;
+    case "-":
+      resultado = valor1 - valor2;
+      break;
+    case "*":
+      resultado = valor1 * valor2;
+      break;
+    case "/":
+      resultado = valor1 / valor2;
+      const resto = valor1 % valor2;
+      alert(`Resultado: ${resultado}, Resto: ${resto}`);
+      break;
+    default:
+      alert("Operador inválido.");
+      break;
+  }
+
+  if (resultado !== undefined) {
+    alert(`Resultado: ${resultado}`);
+  }
+</script>
+
+</body>
+</html>
